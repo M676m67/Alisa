@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>البوابة الرقمية الموحدة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-anim"></div>
+
+  <header>
+    <h1>البوابة الرقمية الموحدة</h1>
+    <p>
+      نقطة الانطلاق المركزية لكافة الخدمات الرسمية والإدارية.
+      <br>
+      دقة في الأداء، سرعة في الإنجاز، وأمان عالي المستوى.
+    </p>
+  </header>
+
+  <section>
+    <div class="container">
+      
+      <div class="card scroll-element">
+        <div class="icon-box"><i class="fa-solid fa-building-columns"></i></div>
+        <h2>بوابة النقابة</h2>
+        <p>المنصة الرسمية للأعضاء. تتيح لك الوصول إلى قاعدة البيانات، تجديد الاشتراكات، ومتابعة آخر المستجدات والقرارات النقابية بشكل فوري.</p>
+        <a href="#" class="btn" target="_blank">دخول الأعضاء</a>
+      </div>
+
+      <div class="card scroll-element" style="transition-delay: 100ms;">
+        <div class="icon-box"><i class="fa-solid fa-money-check-dollar"></i></div>
+        <h2>الخدمات المصرفية</h2>
+        <p>نظام ربط مباشر مع البنك المعتمد لإجراء التحويلات المالية، سداد الرسوم، ومتابعة الكشوفات البنكية عبر قنوات مشفرة وآمنة.</p>
+        <a href="#" class="btn" target="_blank">البوابة البنكية</a>
+      </div>
+
+      <div class="card scroll-element" style="transition-delay: 200ms;">
+        <div class="icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h2>التشريعات واللوائح</h2>
+        <p>المكتبة القانونية الشاملة. تحتوي على الدستور المنظم، اللوائح التنفيذية، والقرارات الإدارية لضمان سير العمل وفق المعايير.</p>
+        <a href="#" class="btn">تصفح القوانين</a>
+      </div>
+
+      <div class="card scroll-element" style="transition-delay: 300ms;">
+        <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+        <h2>مركز الدعم</h2>
+        <p>فريق دعم فني وإداري جاهز للرد على استفساراتكم وحل المشكلات التقنية على مدار الساعة عبر الخطوط الساخنة.</p>
+        <a href="tel:+201234567890" class="btn">اتصل الآن</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 – جميع الحقوق محفوظة | تم التطوير بأحدث التقنيات</p>
+    <div style="margin-top: 10px; font-size: 1.2rem; letter-spacing: 15px;">
+      <i class="fa-brands fa-twitter" style="cursor: pointer; color: #fff;"></i>
+      <i class="fa-brands fa-facebook" style="cursor: pointer; color: #fff;"></i>
+      <i class="fa-brands fa-instagram" style="cursor: pointer; color: #fff;"></i>
+    </div>
+  </footer>
+
+  <script>
+    // تفعيل الأنيميشن عند ظهور العناصر في الشاشة (Intersection Observer)
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        threshold: 0.1 // العنصر يظهر عندما يدخل 10% منه للشاشة
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+            observer.unobserve(entry.target);       }
+        });
+      }, observerOptions);
+
+      const scrollElements = document.querySelectorAll('.scroll-element');
+      scrollElements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
