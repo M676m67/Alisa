@@ -1,17 +1,73 @@
-const sections = document.querySelectorAll('.section');
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مريم | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-window.addEventListener('scroll', () => {
-  sections.forEach(section => {
-    const pos = section.getBoundingClientRect().top;
-    if (pos < window.innerHeight - 100) {
-      section.style.opacity = '1';
-      section.style.transform = 'translateY(0)';
-    }
-  });
-});
+  <!-- Navbar -->
+  <nav>
+    <h2 class="logo">Mariam</h2>
+    <ul>
+      <li><a href="#about">عني</a></li>
+      <li><a href="#story">بدايتي</a></li>
+      <li><a href="#skills">لغاتي</a></li>
+      <li><a href="#bot">بوت واتساب</a></li>
+    </ul>
+  </nav>
 
-sections.forEach(section => {
-  section.style.opacity = '0';
-  section.style.transform = 'translateY(50px)';
-  section.style.transition = '0.6s ease';
-});
+  <!-- Hero -->
+  <section class="hero">
+    <h1>أهلاً، أنا <span>مريم</span></h1>
+    <p>مُطورة بوتات واتساب ومهتمة بالبرمجة 💻</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>من أنا؟</h2>
+    <p>
+      أنا مريم، بحب البرمجة وبحب أتعلم حاجات جديدة،
+      بدأت رحلتي في تطوير البوتات والمواقع وبسعى أطور نفسي يوم عن يوم.
+    </p>
+  </section>
+
+  <!-- Story -->
+  <section id="story" class="section alt">
+    <h2>كيف بدأت؟</h2>
+    <p>
+      بدأت الفضول عندي من البوتات، وبعدها اتعلمت JavaScript و Node.js
+      واشتغلت على بوتات واتساب باستخدام Baileys.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>اللغات والتقنيات</h2>
+    <div class="cards">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Node.js</div>
+      <div class="card">Baileys</div>
+    </div>
+  </section>
+
+  <!-- Bot -->
+  <section id="bot" class="section alt">
+    <h2>بوت واتساب</h2>
+    <p>
+      عندي بوت واتساب بيقدم أوامر ذكية،
+      إدارة جروبات، تسجيل بيانات، وأوامر مخصصة.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Mariam</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
