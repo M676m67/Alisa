@@ -1,73 +1,79 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>مريم | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hancock | Official</title>
+    <link rel="icon" href="https://files.catbox.moe/1u78o6.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <h2 class="logo">Mariam</h2>
-    <ul>
-      <li><a href="#about">عني</a></li>
-      <li><a href="#story">بدايتي</a></li>
-      <li><a href="#skills">لغاتي</a></li>
-      <li><a href="#bot">بوت واتساب</a></li>
-    </ul>
-  </nav>
+<nav>
+  <h2><i class="fa-solid fa-star"></i> Hancock</h2>
+  
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i id="menu-icon" class="fa-solid fa-bars"></i>
+  </div>
+  
+  <ul id="nav-links">
+    <li><a href="#who"><i class="fa-solid fa-user"></i> Who</a></li>
+    <li><a href="#about"><i class="fa-solid fa-id-badge"></i> Me</a></li>
+    <li><a href="#start"><i class="fa-solid fa-rocket"></i> Start</a></li>
+    <li><a href="#guild"><i class="fa-solid fa-users"></i> Guild</a></li>
+    <li><a href="#links"><i class="fa-solid fa-link"></i> Links</a></li>
+  </ul>
+</nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>أهلاً، أنا <span>مريم</span></h1>
-    <p>مُطورة بوتات واتساب ومهتمة بالبرمجة 💻</p>
-  </section>
+<div id="overlay" onclick="toggleMenu()"></div>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>من أنا؟</h2>
-    <p>
-      أنا مريم، بحب البرمجة وبحب أتعلم حاجات جديدة،
-      بدأت رحلتي في تطوير البوتات والمواقع وبسعى أطور نفسي يوم عن يوم.
-    </p>
-  </section>
-
-  <!-- Story -->
-  <section id="story" class="section alt">
-    <h2>كيف بدأت؟</h2>
-    <p>
-      بدأت الفضول عندي من البوتات، وبعدها اتعلمت JavaScript و Node.js
-      واشتغلت على بوتات واتساب باستخدام Baileys.
-    </p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <h2>اللغات والتقنيات</h2>
-    <div class="cards">
-      <div class="card">HTML</div>
-      <div class="card">CSS</div>
-      <div class="card">JavaScript</div>
-      <div class="card">Node.js</div>
-      <div class="card">Baileys</div>
+<section id="who">
+  <h1 class="fade"><i class="fa-solid fa-user-robot"></i> Who is Hancock?</h1>
+  <div class="card fade">
+    <div class="img-container">
+      <img src="https://files.catbox.moe/6iledz.jpeg" alt="Hancock">
     </div>
-  </section>
+    <p><i class="fa-solid fa-lightbulb"></i> Creative bot developer building smart WhatsApp systems</p>
+  </div>
+</section>
 
-  <!-- Bot -->
-  <section id="bot" class="section alt">
-    <h2>بوت واتساب</h2>
-    <p>
-      عندي بوت واتساب بيقدم أوامر ذكية،
-      إدارة جروبات، تسجيل بيانات، وأوامر مخصصة.
-    </p>
-  </section>
+<section id="about">
+  <h1 class="fade"><i class="fa-solid fa-id-card"></i> About Me</h1>
+  <div class="card fade">
+    <p><i class="fa-solid fa-crown"></i> Name: Hancock</p>
+    <p><i class="fa-solid fa-laptop-code"></i> Developer</p>
+    <p><i class="fa-brands fa-js"></i> JavaScript Lover</p>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Mariam</p>
-  </footer>
+<section id="start">
+  <h1 class="fade"><i class="fa-solid fa-rocket"></i> How I Started</h1>
+  <div class="card fade">
+    <p><i class="fa-solid fa-circle-check"></i> Learned JavaScript</p>
+    <p><i class="fa-solid fa-circle-check"></i> Built First Bot</p>
+    <p><i class="fa-solid fa-circle-check"></i> Created Custom Commands</p>
+    <p><i class="fa-solid fa-circle-check"></i> Hosted Bots Online</p>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="guild">
+  <h1 class="fade"><i class="fa-solid fa-users"></i> Guild</h1>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;">
+    <div class="card fade"><p><i class="fa-solid fa-crown"></i> Leader</p></div>
+    <div class="card fade"><p><i class="fa-solid fa-shield"></i> Moderator</p></div>
+    <div class="card fade"><p><i class="fa-solid fa-fire"></i> Member</p></div>
+  </div>
+</section>
+
+<section id="links">
+  <h1 class="fade"><i class="fa-solid fa-link"></i> Links</h1>
+  <a href="#" class="btn fade"><i class="fa-brands fa-github"></i> GitHub</a>
+  <a href="#" class="btn fade"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  <a href="#" class="btn fade"><i class="fa-brands fa-telegram"></i> Telegram</a>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
