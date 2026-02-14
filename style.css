@@ -107,14 +107,13 @@ nav a:hover {
         display: block;
     }
 }
-
 section {
-    min-height: 100vh;
-    padding: 120px 8%;
+    min-height: auto;
+    padding: 85px 8%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
 }
 
